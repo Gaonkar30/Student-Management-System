@@ -1,10 +1,11 @@
 package sms;
 import java.util.*;
+
 public class School {
     private List<Student> students ;
     private List<Teacher> teachers ;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static int  totalMoneyEarned;
+    private static int totalMoneySpent;
     public School(List<Student> students, List<Teacher> teachers){
         this.students = students;
         this.teachers = teachers;
@@ -17,8 +18,9 @@ public class School {
     public void addTeachers(Teacher teacher) {
         teachers.add(teacher);
     }
-    public void updateMoneyEarned(int MoneyEarned) {
+    public static void updateMoneyEarned(int MoneyEarned) {
         totalMoneyEarned += MoneyEarned;
+        
     }
     public void updateTotalMoneySpent(int MoneySpent) {
         totalMoneyEarned-=MoneySpent;

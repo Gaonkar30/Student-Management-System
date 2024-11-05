@@ -40,6 +40,10 @@ public class Student {
     // we wont need to set name and id
     public void updatefeepaid(int fees){
         feesPaid+=fees;
+        School.updateMoneyEarned(feesPaid);
+    }
+    public int getRemainingFees(){
+        return totalFees - feesPaid;
     }
 
 }
